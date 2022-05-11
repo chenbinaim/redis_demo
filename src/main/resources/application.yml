@@ -1,0 +1,34 @@
+spring:
+  #reids
+  redis:
+    host: 192.168.182.125
+    port: 6379
+    password: cUGtEKY9wyBShTi6
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000
+    database: 5
+  #mongodb
+  data:
+    mongodb:
+      test:
+        uri: mongodb://root:Abcd1234%7e@192.168.182.125:27017/test
+        pool:
+          #单节点最大连接数
+          max-connections-per-host: 200
+          #单节点最小连接数
+          min-connections-per-host: 20
+          #连接最空闲时间
+          max-connection-idle-time: 300000
+          #单连接最大堵塞线程数
+          max-thread-block-for-connection: 20
+          #连接池获取可用连接最大超时时间，0为不超时
+          max-wait-time: 2000
+          #连接超时时间，0为不超时
+          connection-timeout: 10000
+          #响应超时时间，0为不超时
+          socket-timeout: 0
